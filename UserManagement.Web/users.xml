@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <Id>1</Id>
+    <UserName>admin</UserName>
+    <Password>4dm1n</Password>
+    <FirstName>Ad</FirstName>
+    <LastName>Min</LastName>
+    <DateOfBirth>2024-04-16T00:00:00</DateOfBirth>
+    <PlaceOfBirth>SkyNet</PlaceOfBirth>
+    <PlaceOfResidence>SkyNet</PlaceOfResidence>
+  </User>
+  <User>
+    <Id>2</Id>
+    <UserName>SuperUser</UserName>
+    <Password>Sup3rUs3r</Password>
+    <FirstName>Super</FirstName>
+    <LastName>User</LastName>
+    <DateOfBirth>2024-04-16T00:00:00</DateOfBirth>
+    <PlaceOfBirth>Ether</PlaceOfBirth>
+    <PlaceOfResidence>Ether</PlaceOfResidence>
+  </User>
+  <User>
+    <Id>3</Id>
+    <UserName>user</UserName>
+    <Password>us3r</Password>
+    <FirstName>Us</FirstName>
+    <LastName>Er</LastName>
+    <DateOfBirth>2024-04-16T00:00:00</DateOfBirth>
+    <PlaceOfBirth>Budapest</PlaceOfBirth>
+    <PlaceOfResidence>Budapest</PlaceOfResidence>
+  </User>
+  <User>
+    <Id>4</Id>
+    <UserName>1</UserName>
+    <Password>1</Password>
+    <FirstName>1</FirstName>
+    <LastName>1</LastName>
+    <DateOfBirth>2024-04-16T00:00:00</DateOfBirth>
+    <PlaceOfBirth>1</PlaceOfBirth>
+    <PlaceOfResidence>1</PlaceOfResidence>
+  </User>
+</ArrayOfUser>

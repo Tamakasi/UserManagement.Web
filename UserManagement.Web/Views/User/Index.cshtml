@@ -1,0 +1,90 @@
+﻿@model List<UserManagement.Models.Models.User>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<partial name="_Notification" />
+
+<div class="container">
+    <div class="row pt-4">
+
+        <div class="col-6">
+            <h2 class="text-primary">
+                Users List
+            </h2>
+        </div>
+
+            <div class="row pt-4">
+                <div class="col-6 text-right">
+                    <a id="exportButton" class="btn btn-primary" onclick="ClickExport()">
+                    <i class="bi bi-file-earmark-arrow-down-fill"></i>   Export to xml
+                    </a>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-6 text-right">
+                    <a asp-controller="User" asp-action="Create" class="btn btn-primary">
+                        <i class="bi bi-plus-circle"></i>   Create new User
+                    </a>
+                </div>
+            </div>
+
+        <div class="row pt-4">
+            <div class="col-sm-12">
+                <div class="form-inline pull-right">
+                    <input type="text" class="form-control" id="txtSearch" />
+                    <i class="bi bi-search"></i> Search
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        
+    <div class="row pt-4">
+        <div id="grdUsers"></div>
+    </div>
+</div>
+
+<script>
+    $(() => {
+        getUsers();
+
+        $('#txtSearch').on('keyup', () => {
+            // if ($('#txtSearch').val().length >= 3) {
+            //     getUsers();
+            // }
+            getUsers();
+        })
+    });
+
+    function getUsers() {
+        $.ajax({
+            url: '@Url.Action("SearchUsers", "User")',
+            dataType: 'html',
+            method: 'GET',
+            data: { searchText: $('#txtSearch').val() },
+            success: function (res) {
+                $('#grdUsers').html('').html(res);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+    }
+</script>
+
+<script>
+    function ClickExport() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ExportToXML", "User")',
+            async: true,
+            success: function (msg) {
+                ServiceSucceeded(msg);
+            },
+            error: function () {
+                return "error";
+            }
+        });
+    }
+</script>

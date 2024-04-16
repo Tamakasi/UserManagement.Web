@@ -1,0 +1,43 @@
+﻿@model UserManagement.Models.Models.User
+
+<partial name="_Notification" />
+
+<div class="row pt-4">
+    <h2 class="text-primary">Login </h2>
+</div>
+
+<form id="account" method="post">
+    <div class="container">
+        <div class="row pt-4">
+
+            
+            
+
+            @using (Html.BeginForm())
+            {
+                <div class="row pt-4">
+                    <label asp-for="Password" class="p-0">User Name</label>
+                    <input asp-for="UserName" type="text" class="form-control" id="userid" name="userid" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+                <div class="row pt-4">
+                    <label asp-for="Password" class="p-0">Password</label>
+                    <input asp-for="UserName" type="text" class="form-control" id="pwd" name="pwd" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="row pt-4">
+                    <input type="submit" asp-controller="User" asp-action="Index" class="btn btn-primary form-control" value="Log In" />
+                </div>
+                
+            }
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,4 @@
+1;admin;4dm1n;Ad;Min;2024-04-16;SkyNet;SkyNet
+2;SuperUser;Sup3rUs3r;Super;User;2024-04-16;Ether;Ether
+3;user;us3r;Us;Er;2024-04-16;Budapest;Budapest
+4;1;1;1;1;2024-04-16;1;1

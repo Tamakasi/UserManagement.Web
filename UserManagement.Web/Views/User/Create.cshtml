@@ -1,0 +1,61 @@
+﻿@model UserManagement.Models.Models.User
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Category</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Id" class="p-0">Id</label>
+            <input asp-for="Id" type="text" class="form-control" disabled value="@Model.Id" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="UserName" class="p-0">User Name</label>
+            <input asp-for="UserName" type="text" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Password" class="p-0">Password</label>
+            <input asp-for="Password" type="text" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="FirstName" class="p-0">First Name</label>
+            <input asp-for="FirstName" type="text" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="LastName" class="p-0">Last Name</label>
+            <input asp-for="LastName" type="text" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="DateOfBirth" class="p-0">Date of Birth</label>
+            <input asp-for="DateOfBirth" type="text" class="form-control" />
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="PlaceOfBirth" class="p-0">Place Of Birth</label>
+            <input asp-for="PlaceOfBirth" type="text" class="form-control" />
+            <span asp-validation-for="PlaceOfBirth" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="PlaceOfResidence" class="p-0">Place Of Residence</label>
+            <input asp-for="PlaceOfResidence" type="text" class="form-control" />
+            <span asp-validation-for="PlaceOfResidence" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Create</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="User" asp-action="Index" class="btn btn-secondary border form-control">Back to list</a>
+            </div>
+        </div>
+
+    </div>
+</form>
+
